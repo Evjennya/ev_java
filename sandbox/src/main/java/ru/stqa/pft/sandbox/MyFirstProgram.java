@@ -1,24 +1,28 @@
 package ru.stqa.pft.sandbox;
 
 public class MyFirstProgram {
-	
-	public static void main(String[] arsg){
-		System.out.println("Hello, world!");
 
-    double l = 5;
-    double a = 4;
-    double b = 6;
+  public static void main(String[] arsg) {
 
-    System.out.println("Площадь квадрата со стороной " + l + " = " + area(l));
-    System.out.println("Площадь прямоугольника со сторонами " + a + " и " + b + " = " + area(a, b));
+    Point p = new Point();
+    p.x = -1;
+    p.y = 2;
+
+    Point q = new Point();
+    q.x = 9;
+    q.y = 11;
+
+
+    System.out.println("Расстояние между двумя точками = " + distance(p, q));
+
+  }
+    public static double distance(Point p1, Point p2){
+    return Math.sqrt( Math.pow(p1.x-p2.x, 2) + Math.pow(p1.y-p2.y, 2));
+  }
+
+
 
   }
 
-  public static double area(double len){
-    return len *len;
-  }
 
-  public static double area(double a, double b){
-    return a * b;
-  }
-}
+
